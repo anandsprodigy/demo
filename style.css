@@ -21,10 +21,35 @@ body{
     width: 700px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .container .title{
     font-size: 30px;
     font-weight: 400;
+    text-align: center;
+}
+
+.container .inputcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .inputcontent input[type="text"] {
+    width: 90%;
+    height: 40px;
     margin-top: 10px;
+    border-radius: 1px solid #ced4da;
+}
+
+.container .inputcontent button{
+    width: 90%;
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 1px solid #ced4da;
+    color: white;
+    background-color: #007bff;
 }
