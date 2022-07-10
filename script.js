@@ -13,11 +13,16 @@ function addTag(e){
         var listItem = document.createElement("li");
         var tag = listItem.appendChild(document.createTextNode(input.value+' <i class="fa-solid fa-circle-xmark"></i>'));
         console.log(tag);
-        var litag = '<li class="tags"> '+input.value+' <i class="fa-solid fa-circle-xmark"></i></li>';
+        var litag = '<li class="tags"> '+input.value+' <i class="fa-solid fa-circle-xmark" onclick="remove(this)"></i></li>';
         list.insertAdjacentHTML("afterbegin", litag);
     }
 }
 
 function removeTags(e){
     list.innerHTML = '';
+}
+
+function remove(e){
+   e.parentElement.nodeName.innerHTML = "";
+   console.log(e.parentElement.nodeName.innerHTML); 
 }
